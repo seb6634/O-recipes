@@ -1,0 +1,42 @@
+@use 'src/styles/vars';
+@use 'sass:color';
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  width: calc(50% - #{vars.$gutter / 2});
+  margin-top: vars.$gutter;
+  overflow: hidden;
+  
+  @media (max-width: vars.$small) {
+    width: 100%;
+  }
+
+  &-content {
+    padding: vars.$gutter / 2;
+  }
+
+  &-title {
+    font-size: 1.15em;
+    margin-bottom: .2em;
+  }
+
+  &-desc {
+    color: rgba(0,0,0,.4);
+    font-size: .8em;
+    margin-bottom: vars.$gutter / 2;
+  }
+
+  &-link {
+    background-color: vars.$color;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: vars.$gutter / 2;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: color.scale(vars.$color, $lightness: -30%);
+    }
+  }
+}

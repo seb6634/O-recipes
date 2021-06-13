@@ -1,0 +1,15 @@
+@use 'src/styles/vars';
+
+.header {
+  padding: (vars.$gutter / 2) vars.$gutter;
+  box-shadow: 0 20px 20px -30px rgba(0,0,0,.4); 
+  text-align: center;
+
+  &-logo {
+    width: 50px;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
